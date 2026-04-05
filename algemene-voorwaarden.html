@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algemene Voorwaarden — Aannemersbedrijf Altijd</title>
+  <meta name="description" content="Algemene voorwaarden van Aannemersbedrijf Altijd. Lees hier onze voorwaarden voor offertes, uitvoering, garantie en aansprakelijkheid." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black:     #070707;
+      --dark:      #0F0F0F;
+      --surface:   #161616;
+      --surface2:  #1E1E1C;
+      --orange:    #f15523;
+      --orange-dim: #b03a10;
+      --cream:     #EDE8DF;
+      --muted:     #5A5750;
+      --border:    #2A2A26;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-cond:    'Barlow Condensed', sans-serif;
+      --font-body:    'Barlow', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--cream); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    body::after {
+      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-size: 180px; opacity: 0.03;
+    }
+
+    /* ─── NAV ─────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 4rem; height: 72px;
+      background: rgba(7,7,7,0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo-img { height: 44px; width: auto; display: block; }
+    .nav-links {
+      display: flex; gap: 2.5rem; list-style: none;
+      font-family: var(--font-cond); font-weight: 600; font-size: 0.8rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .nav-links a { color: var(--muted); transition: color 0.2s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1px; background: var(--orange); transform: scaleX(0); transform-origin: left; transition: transform 0.25s; }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      background: var(--orange); color: var(--black);
+      font-family: var(--font-cond); font-weight: 700; font-size: 0.75rem;
+      letter-spacing: 0.2em; text-transform: uppercase; padding: 10px 22px;
+      clip-path: polygon(0 0, 100% 0, 100% 65%, 88% 100%, 0 100%);
+      transition: background 0.2s; cursor: pointer; border: none;
+    }
+    .nav-cta:hover { background: var(--cream); }
+
+    /* ─── PAGE HEADER ─────────────────────────────────────────── */
+    .page-header {
+      padding: 140px 4rem 6rem;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--orange), var(--orange-dim), transparent);
+    }
+    .page-header-deco {
+      position: absolute; right: -2vw; top: 50%; transform: translateY(-50%);
+      font-family: var(--font-display); font-size: 20vw; line-height: 0.85;
+      color: transparent; -webkit-text-stroke: 1px rgba(241,85,35,0.05);
+      user-select: none; pointer-events: none;
+    }
+    .page-header-inner { position: relative; z-index: 1; max-width: 760px; }
+    .page-header-label {
+      font-family: var(--font-cond); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.35em; text-transform: uppercase; color: var(--orange);
+      margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;
+    }
+    .page-header-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--orange); }
+    .page-header h1 {
+      font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 8rem);
+      line-height: 0.9; text-transform: uppercase; color: var(--cream); margin-bottom: 1.5rem;
+    }
+    .page-header h1 span { color: var(--orange); display: block; }
+    .page-header-meta {
+      font-family: var(--font-cond); font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .page-header-meta-dot { width: 4px; height: 4px; background: var(--orange); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+    .page-breadcrumb {
+      margin-bottom: 2rem;
+      font-family: var(--font-cond); font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); display: flex; align-items: center; gap: 8px;
+    }
+    .page-breadcrumb a:hover { color: var(--cream); }
+    .page-breadcrumb-sep { color: var(--orange); }
+
+    /* ─── CONTENT LAYOUT ──────────────────────────────────────── */
+    .content-wrap {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 5rem;
+      padding: 6rem 4rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    /* ─── SIDEBAR ─────────────────────────────────────────────── */
+    .toc {
+      position: sticky;
+      top: 96px;
+    }
+    .toc-title {
+      font-family: var(--font-cond); font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.3em; text-transform: uppercase; color: var(--orange);
+      margin-bottom: 1.2rem; display: flex; align-items: center; gap: 8px;
+    }
+    .toc-title::before { content: ''; display: block; width: 16px; height: 1px; background: var(--orange); }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .toc-list a {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-cond); font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--muted); padding: 7px 10px;
+      border-left: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s, padding-left 0.2s;
+    }
+    .toc-list a:hover { color: var(--cream); border-color: var(--orange); padding-left: 14px; }
+    .toc-list a.active { color: var(--orange); border-color: var(--orange); }
+    .toc-num {
+      font-family: var(--font-display); font-size: 0.9rem; color: var(--border);
+      flex-shrink: 0; transition: color 0.2s;
+    }
+    .toc-list a:hover .toc-num, .toc-list a.active .toc-num { color: var(--orange); }
+
+    .toc-cta {
+      margin-top: 2.5rem;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 1.5rem;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+    }
+    .toc-cta-label {
+      font-family: var(--font-cond); font-size: 0.65rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem;
+    }
+    .toc-cta-text {
+      font-family: var(--font-cond); font-size: 0.95rem; font-weight: 700;
+      text-transform: uppercase; color: var(--cream); line-height: 1.2; margin-bottom: 1rem;
+    }
+    .btn-primary {
+      display: inline-block; background: var(--orange); color: var(--black);
+      font-family: var(--font-cond); font-weight: 700; font-size: 0.72rem;
+      letter-spacing: 0.2em; text-transform: uppercase; padding: 12px 20px;
+      clip-path: polygon(0 0, 100% 0, 100% 65%, 92% 100%, 0 100%);
+      transition: background 0.2s, transform 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--cream); transform: translateY(-2px); }
+
+    /* ─── ARTICLES ────────────────────────────────────────────── */
+    .articles { display: flex; flex-direction: column; gap: 0; }
+
+    .av-article {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .av-article:first-child { padding-top: 0; }
+    .av-article:last-child { border-bottom: none; }
+
+    .av-article-header {
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .av-num {
+      font-family: var(--font-display); font-size: 3.5rem; color: transparent;
+      -webkit-text-stroke: 1px var(--border); line-height: 0.9; flex-shrink: 0;
+      transition: -webkit-text-stroke-color 0.3s;
+      padding-top: 4px;
+    }
+    .av-article:hover .av-num { -webkit-text-stroke-color: var(--orange-dim); }
+    .av-article-title {
+      font-family: var(--font-cond); font-size: 1.4rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream);
+      line-height: 1.1; padding-top: 8px;
+    }
+    .av-article-title span {
+      display: block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.25em;
+      color: var(--orange); margin-bottom: 4px;
+    }
+
+    .av-body { padding-left: 5rem; }
+    .av-body p {
+      font-size: 0.93rem; line-height: 1.85; color: var(--muted); margin-bottom: 1rem;
+    }
+    .av-body p:last-child { margin-bottom: 0; }
+    .av-body strong { color: var(--cream); font-weight: 500; }
+
+    .av-list {
+      list-style: none; display: flex; flex-direction: column; gap: 0.75rem;
+      margin: 1rem 0;
+    }
+    .av-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.93rem; line-height: 1.7; color: var(--muted);
+    }
+    .av-list li::before {
+      content: '';
+      width: 6px; height: 6px; background: var(--orange);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      flex-shrink: 0; margin-top: 7px;
+    }
+
+    .av-sub {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 1.2rem 1.5rem;
+      background: var(--surface); border-left: 2px solid var(--orange);
+      margin-bottom: 0.75rem;
+    }
+    .av-sub-num {
+      font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; color: var(--orange); flex-shrink: 0; padding-top: 2px;
+    }
+    .av-sub p { font-size: 0.9rem; line-height: 1.75; color: var(--muted); margin: 0; }
+
+    .av-highlight {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+    .av-highlight p { font-size: 0.9rem; line-height: 1.75; color: var(--muted); margin: 0; }
+    .av-highlight p + p { margin-top: 0.5rem; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer { background: var(--dark); border-top: 1px solid var(--border); position: relative; overflow: hidden; }
+    footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--orange) 0%, var(--orange-dim) 60%, transparent 100%); }
+    .footer-main { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 4rem; padding: 5rem 4rem 4rem; border-bottom: 1px solid var(--border); }
+    .footer-brand-logo { height: 52px; width: auto; margin-bottom: 1.5rem; display: block; }
+    .footer-brand-text { font-size: 0.88rem; line-height: 1.75; color: var(--muted); max-width: 280px; margin-bottom: 2rem; }
+    .footer-contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 0.9rem; }
+    .footer-contact-icon { width: 32px; height: 32px; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%); color: var(--orange); }
+    .footer-contact-icon svg { width: 14px; height: 14px; }
+    .footer-contact-label { font-family: var(--font-cond); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; margin-bottom: 2px; }
+    .footer-contact-value { font-size: 0.9rem; color: var(--cream); transition: color 0.2s; }
+    .footer-contact-value:hover { color: var(--orange); }
+    .footer-col-title { font-family: var(--font-cond); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.8rem; display: flex; align-items: center; gap: 10px; }
+    .footer-col-title::before { content: ''; display: block; width: 18px; height: 1px; background: var(--orange); }
+    .footer-nav-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-nav-list a { font-family: var(--font-cond); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); transition: color 0.2s, padding-left 0.2s; display: block; }
+    .footer-nav-list a:hover { color: var(--cream); padding-left: 6px; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 1.8rem 4rem; gap: 2rem; flex-wrap: wrap; }
+    .footer-copy { font-size: 0.78rem; color: var(--muted); }
+    .footer-copy span { color: var(--orange); }
+    .footer-legal { display: flex; gap: 2rem; list-style: none; font-family: var(--font-cond); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; }
+    .footer-legal a { color: var(--muted); transition: color 0.2s; }
+    .footer-legal a:hover { color: var(--orange); }
+
+    /* ─── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .content-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .toc { position: static; }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { display: none; }
+      .page-header { padding: 120px 1.5rem 4rem; }
+      .content-wrap { padding: 4rem 1.5rem; }
+      .av-body { padding-left: 0; }
+      .av-article-header { flex-direction: column; gap: 0.5rem; }
+      .av-num { font-size: 2.5rem; }
+      .footer-main { grid-template-columns: 1fr; padding: 3rem 1.5rem 2.5rem; gap: 2.5rem; }
+      .footer-bottom { padding: 1.5rem; flex-direction: column; align-items: flex-start; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html"><img src="logo.webp" alt="Aannemersbedrijf Altijd" class="nav-logo-img" /></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#diensten">Diensten</a></li>
+      <li><a href="index.html#over-ons">Over Ons</a></li>
+      <li><a href="index.html#werkwijze">Werkwijze</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="window.location.href='index.html#contact'">Offerte Aanvragen</button>
+  </nav>
+
+  <!-- ─── PAGE HEADER ───────────────────────────────────────────── -->
+  <div class="page-header">
+    <div class="page-header-deco" aria-hidden="true">AV</div>
+    <div class="page-header-inner">
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="page-breadcrumb-sep">›</span>
+        <span style="color:var(--cream)">Algemene Voorwaarden</span>
+      </div>
+      <div class="page-header-label">Juridisch</div>
+      <h1>Algemene<span>Voorwaarden</span></h1>
+      <div class="page-header-meta">
+        <span>Aannemersbedrijf Altijd</span>
+        <div class="page-header-meta-dot"></div>
+        <span>12 artikelen</span>
+        <div class="page-header-meta-dot"></div>
+        <span>Nederlands recht</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CONTENT ───────────────────────────────────────────────── -->
+  <div class="content-wrap">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc">
+      <div class="toc-title">Inhoudsopgave</div>
+      <ul class="toc-list">
+        <li><a href="#art1"><span class="toc-num">01</span> Algemeen</a></li>
+        <li><a href="#art2"><span class="toc-num">02</span> Offertes &amp; aanbiedingen</a></li>
+        <li><a href="#art3"><span class="toc-num">03</span> Contractduur &amp; uitvoering</a></li>
+        <li><a href="#art4"><span class="toc-num">04</span> Opschorting &amp; ontbinding</a></li>
+        <li><a href="#art5"><span class="toc-num">05</span> Overmacht</a></li>
+        <li><a href="#art6"><span class="toc-num">06</span> Betaling &amp; incasso</a></li>
+        <li><a href="#art7"><span class="toc-num">07</span> Eigendomsvoorbehoud</a></li>
+        <li><a href="#art8"><span class="toc-num">08</span> Garantie &amp; klachten</a></li>
+        <li><a href="#art9"><span class="toc-num">09</span> Aansprakelijkheid</a></li>
+        <li><a href="#art10"><span class="toc-num">10</span> Toepasselijk recht</a></li>
+        <li><a href="#art11"><span class="toc-num">11</span> Klachtenprocedure</a></li>
+        <li><a href="#art12"><span class="toc-num">12</span> Niet nakomen afspraken</a></li>
+      </ul>
+      <div class="toc-cta">
+        <div class="toc-cta-label">Vragen?</div>
+        <div class="toc-cta-text">Neem contact met ons op</div>
+        <a href="mailto:info@aannemersbedrijfaltijd.nl" class="btn-primary">Stuur een mail</a>
+      </div>
+    </aside>
+
+    <!-- Articles -->
+    <main class="articles">
+
+      <div class="av-article" id="art1">
+        <div class="av-article-header">
+          <div class="av-num">01</div>
+          <div class="av-article-title">
+            <span>Artikel 1</span>
+            Algemeen
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Deze voorwaarden zijn van toepassing op alle aanbiedingen, offertes en overeenkomsten tussen <strong>Aannemersbedrijf Altijd</strong>, hierna 'gebruiker', en elke natuurlijke of rechtspersoon, hierna 'opdrachtgever', tenzij uitdrukkelijk en schriftelijk anders overeengekomen door beide partijen.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art2">
+        <div class="av-article-header">
+          <div class="av-num">02</div>
+          <div class="av-article-title">
+            <span>Artikel 2</span>
+            Offertes en aanbiedingen
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Offertes en aanbiedingen van de gebruiker zijn <strong>één maand geldig</strong>. Gebruiker is niet gebonden aan offertes of aanbiedingen in het geval van een duidelijke vergissing of schrijffout.</p>
+          <p>Bij akkoord met een offerte of aanbieding kan opdrachtgever tot <strong>30 dagen voor de afspraak</strong> annuleren. Bij annulering tot 30 dagen voor de afspraak moet opdrachtgever <strong>20%</strong> van het overeengekomen bedrag betalen als compensatie voor gereserveerde tijd en materialen.</p>
+          <p>Bij annulering tot <strong>48 uur voor de afspraak</strong> moet opdrachtgever <strong>40%</strong> van het overeengekomen bedrag betalen als compensatie.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art3">
+        <div class="av-article-header">
+          <div class="av-num">03</div>
+          <div class="av-article-title">
+            <span>Artikel 3</span>
+            Contractduur, leveringstermijnen, uitvoering en wijziging
+          </div>
+        </div>
+        <div class="av-body">
+          <p>De overeenkomst tussen gebruiker en opdrachtgever is voor <strong>onbepaalde tijd</strong>, tenzij uitdrukkelijk en schriftelijk anders overeengekomen. Termijnen voor de voltooiing van werkzaamheden zijn nooit fatale termijnen. Gebruiker moet altijd een redelijke termijn krijgen om alsnog uitvoering te geven aan de overeenkomst.</p>
+          <p>Als tijdens de uitvoering blijkt dat wijziging of aanvulling noodzakelijk is voor een correcte uitvoering, zullen partijen tijdig en in onderling overleg de overeenkomst aanpassen. Hierdoor kan het overeengekomen bedrag worden aangepast.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art4">
+        <div class="av-article-header">
+          <div class="av-num">04</div>
+          <div class="av-article-title">
+            <span>Artikel 4</span>
+            Opschorting, ontbinding en tussentijdse beëindiging
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Gebruiker heeft het recht om de nakoming van zijn verplichtingen op te schorten of de overeenkomst direct te ontbinden, indien opdrachtgever zijn verplichtingen uit de overeenkomst niet, niet volledig of niet tijdig nakomt, of indien er omstandigheden optreden waardoor het voor gebruiker niet langer redelijk is de overeenkomst na te komen.</p>
+          <p>Als de ontbinding aan opdrachtgever is toe te rekenen, heeft gebruiker recht op <strong>schadevergoeding</strong>, inclusief reeds gemaakte (indirecte) kosten. Bij ontbinding zijn de vorderingen van gebruiker op opdrachtgever direct opeisbaar.</p>
+          <p>In geval van liquidatie, (aanvraag van) surseance van betaling of faillissement, schuldsanering of een andere situatie waarin opdrachtgever niet langer vrijelijk over zijn vermogen kan beschikken, mag gebruiker de overeenkomst direct opzeggen of de order annuleren, zonder verplichting tot betaling van enige vergoeding.</p>
+          <p>Bij (gedeeltelijke) annulering van een geplaatste order is opdrachtgever verplicht om de redelijkerwijs gemaakte kosten aan gebruiker te vergoeden.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art5">
+        <div class="av-article-header">
+          <div class="av-num">05</div>
+          <div class="av-article-title">
+            <span>Artikel 5</span>
+            Overmacht
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Gebruiker is niet verplicht om enige verplichting jegens opdrachtgever na te komen als hij daartoe wordt verhinderd door omstandigheden die niet aan zijn schuld te wijten zijn en die niet volgens de wet, een rechtshandeling of gangbare opvattingen voor zijn rekening komen.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art6">
+        <div class="av-article-header">
+          <div class="av-num">06</div>
+          <div class="av-article-title">
+            <span>Artikel 6</span>
+            Betaling en incassokosten
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Betaling dient <strong>direct na de werkzaamheden</strong> plaats te vinden, tenzij schriftelijk anders overeengekomen. De betalingsmethode wordt in overleg bepaald. Opdrachtgever ontvangt een betalingsbewijs.</p>
+          <p>Als opdrachtgever niet tijdig betaalt, treedt hij van rechtswege in verzuim en is de wettelijke (handels)rente verschuldigd, met een minimum van <strong>1% per maand</strong>.</p>
+          <p>Bezwaren tegen de hoogte van een factuur schorten de betalingsverplichting niet op. Als opdrachtgever zijn verplichtingen niet nakomt, komen alle redelijke kosten voor het verkrijgen van voldoening buiten rechte voor zijn rekening. Opdrachtgever is buitengerechtelijke kosten verschuldigd gelijk aan <strong>15% van de € 150,00</strong>.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art7">
+        <div class="av-article-header">
+          <div class="av-num">07</div>
+          <div class="av-article-title">
+            <span>Artikel 7</span>
+            Voorbehoud van eigendom
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Alle door de gebruiker geleverde zaken in het kader van de overeenkomst blijven eigendom van de gebruiker totdat de opdrachtgever alle verplichtingen uit de overeenkomst naar behoren is nagekomen.</p>
+          <p>De opdrachtgever mag de zaken die onder het eigendomsvoorbehoud vallen niet verpanden of op enige andere manier bezwaren. Als derden beslag leggen op de zaken waarop eigendomsvoorbehoud rust, moet de opdrachtgever de gebruiker hiervan op de hoogte stellen.</p>
+          <p>Opdrachtgever is verplicht om de geleverde zaken te verzekeren en verzekerd te houden tegen brand, ontploffing, waterschade en diefstal.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art8">
+        <div class="av-article-header">
+          <div class="av-num">08</div>
+          <div class="av-article-title">
+            <span>Artikel 8</span>
+            Garantie, klachten en uitzonderingen
+          </div>
+        </div>
+        <div class="av-body">
+          <div class="av-sub">
+            <div class="av-sub-num">8.1</div>
+            <p>Gebruiker biedt een standaardgarantie van <strong>vijf jaar</strong> op reparatiewerkzaamheden. Voor reinigingswerkzaamheden en noodreparaties geldt een garantieperiode van <strong>één jaar</strong>. Voor volledige renovatiewerkzaamheden geldt een garantietermijn van <strong>tien jaar</strong>.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">8.2</div>
+            <p>Elke garantie vervalt als een gebrek is ontstaan door ondeskundig of oneigenlijk gebruik, of door onjuiste opslag of onderhoud door de opdrachtgever en/of derden.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">8.3</div>
+            <p>Indien een derde partij of de klant zelf wijzigingen aanbrengt aan de situatie voordat de garantiewerkzaamheden kunnen worden uitgevoerd, vervalt de garantie.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">8.4</div>
+            <p>De opdrachtgever moet het geleverde onderzoeken zodra de werkzaamheden zijn uitgevoerd. Eventuele gebreken dienen binnen <strong>acht dagen</strong> na ontdekking schriftelijk en aangetekend te worden gemeld.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">8.5</div>
+            <p>De opdrachtgever moet de gebruiker in staat stellen een klacht te onderzoeken. Tijdig indienen van een klacht schort de betalingsverplichting niet op.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="av-article" id="art9">
+        <div class="av-article-header">
+          <div class="av-num">09</div>
+          <div class="av-article-title">
+            <span>Artikel 9</span>
+            Beperking van aansprakelijkheid
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Als de gebruiker aansprakelijk wordt geacht, is deze aansprakelijkheid beperkt tot wat in dit artikel is vastgelegd. De gebruiker is niet aansprakelijk voor schade ontstaan doordat de gebruiker is uitgegaan van onjuiste en/of onvolledige gegevens verstrekt door de opdrachtgever.</p>
+          <p>De gebruiker is alleen aansprakelijk voor <strong>directe schade</strong>. Onder directe schade wordt alleen verstaan:</p>
+          <ul class="av-list">
+            <li>Redelijke kosten om de oorzaak en omvang van de schade vast te stellen.</li>
+            <li>Eventuele redelijke kosten om het gebrekkige werk van de gebruiker te herstellen, voor zover dit aan de gebruiker kan worden toegerekend.</li>
+            <li>Redelijke kosten gemaakt om schade te voorkomen of beperken, mits de opdrachtgever aantoont dat deze kosten hebben geleid tot beperking van directe schade.</li>
+          </ul>
+          <div class="av-highlight">
+            <p>De gebruiker is <strong>nooit aansprakelijk</strong> voor indirecte schade, zoals gevolgschade, gederfde winst, gemiste besparingen en schade door bedrijfsstagnatie.</p>
+            <p>De aansprakelijkheid is beperkt tot maximaal <strong>drie keer de factuurwaarde</strong> van de bestelling of het gedeelte waarop de aansprakelijkheid betrekking heeft, en altijd beperkt tot het bedrag dat zijn verzekeraar uitkeert.</p>
+          </div>
+          <p>De beperkingen van de aansprakelijkheid zijn niet van toepassing als de schade is veroorzaakt door <strong>opzet of grove schuld</strong> van de gebruiker of zijn medewerkers.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art10">
+        <div class="av-article-header">
+          <div class="av-num">10</div>
+          <div class="av-article-title">
+            <span>Artikel 10</span>
+            Toepasselijk recht en geschillen
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Op alle rechtsverhoudingen waarbij de gebruiker betrokken is, is uitsluitend het <strong>Nederlandse recht</strong> van toepassing. De <strong>rechtbank in 's-Hertogenbosch</strong> is bevoegd om kennis te nemen van geschillen tussen de opdrachtgever en de gebruiker.</p>
+          <p>Partijen zullen alleen een beroep doen op de rechter nadat zij zich maximaal hebben ingespannen om het geschil onderling op te lossen.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art11">
+        <div class="av-article-header">
+          <div class="av-num">11</div>
+          <div class="av-article-title">
+            <span>Artikel 11</span>
+            Klachtenprocedure
+          </div>
+        </div>
+        <div class="av-body">
+          <div class="av-sub">
+            <div class="av-sub-num">11.1</div>
+            <p>Als een klant een klacht heeft, dient de klant deze <strong>schriftelijk en zo gedetailleerd mogelijk</strong> in te dienen bij ons bedrijf, binnen een redelijke termijn na het constateren van het probleem.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">11.2</div>
+            <p>Wij bevestigen de ontvangst binnen <strong>5 werkdagen</strong> en onderzoeken de klacht uiterlijk binnen <strong>14 dagen</strong> na ontvangst en stellen een passende oplossing voor.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">11.3</div>
+            <p>Als de klacht gegrond wordt bevonden, behouden wij ons het recht voor om de klacht op te lossen door het herstellen van het probleem, het opnieuw leveren van het product of het aanbieden van een passende compensatie.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">11.4</div>
+            <p>De klant mag <strong>geen derde partij</strong> inschakelen om de klacht op te lossen zonder voorafgaande schriftelijke toestemming van ons bedrijf. Het zonder toestemming inschakelen van een derde kan leiden tot extra kosten voor de klant.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">11.5</div>
+            <p>Als de klant niet tevreden is met de voorgestelde oplossing, kan de klant overwegen verdere stappen te ondernemen, zoals het inschakelen van een geschillencommissie of het starten van een juridische procedure.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="av-article" id="art12">
+        <div class="av-article-header">
+          <div class="av-num">12</div>
+          <div class="av-article-title">
+            <span>Artikel 12</span>
+            Kosten bij het niet nakomen van offerte-afspraken
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Indien een klant niet aanwezig is of de afspraak niet nakomt tijdens een geplande offerteafspraak, zullen wij een vergoeding in rekening brengen.</p>
+          <div class="av-highlight">
+            <p>Deze vergoeding bedraagt <strong>€ 65,- ex btw</strong>, plus <strong>€ 0,23 per gereden kilometer</strong> ter compensatie van de gemaakte kosten en tijd.</p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-main">
+      <div>
+        <img src="logo.webp" alt="Aannemersbedrijf Altijd" class="footer-brand-logo" />
+        <p class="footer-brand-text">Uw betrouwbare dakdekker en aannemer actief door heel Nederland. Altijd vakwerk, altijd op tijd.</p>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg></div>
+          <div><span class="footer-contact-label">Telefoon</span><a href="tel:+31348234960" class="footer-contact-value">348 234 960</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><span class="footer-contact-label">E-mail</span><a href="mailto:info@aannemersbedrijfaltijd.nl" class="footer-contact-value">info@aannemersbedrijfaltijd.nl</a></div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Diensten</div>
+        <ul class="footer-nav-list">
+          <li><a href="hellende-daken.html">Hellende daken</a></li>
+          <li><a href="platte-daken.html">Platte daken</a></li>
+          <li><a href="dakgoten-zink.html">Dakgoten zink</a></li>
+          <li><a href="timmerwerk.html">Timmerwerk</a></li>
+          <li><a href="schilderwerk.html">Schilderwerk</a></li>
+          <li><a href="verduurzaming.html">Verduurzaming</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigatie</div>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#over-ons">Over Ons</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="algemene-voorwaarden.html" style="color:var(--orange)">Algemene Voorwaarden</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 <span>Aannemersbedrijf Altijd</span>. Alle rechten voorbehouden.</span>
+      <ul class="footer-legal">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="algemene-voorwaarden.html">Algemene Voorwaarden</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Highlight active TOC item on scroll
+    const articles = document.querySelectorAll('.av-article');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    articles.forEach(a => observer.observe(a));
+  </script>
+
+</body>
+</html>

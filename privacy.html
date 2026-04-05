@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacybeleid &amp; Cookiebeleid — Aannemersbedrijf Altijd</title>
+  <meta name="description" content="Privacybeleid en cookiebeleid van Aannemersbedrijf Altijd. Lees hoe wij omgaan met uw persoonsgegevens en cookies." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black:     #070707;
+      --dark:      #0F0F0F;
+      --surface:   #161616;
+      --surface2:  #1E1E1C;
+      --orange:    #f15523;
+      --orange-dim: #b03a10;
+      --cream:     #EDE8DF;
+      --muted:     #5A5750;
+      --border:    #2A2A26;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-cond:    'Barlow Condensed', sans-serif;
+      --font-body:    'Barlow', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--cream); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    body::after {
+      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-size: 180px; opacity: 0.03;
+    }
+
+    /* ─── NAV ─────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 4rem; height: 72px;
+      background: rgba(7,7,7,0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo-img { height: 44px; width: auto; display: block; }
+    .nav-links {
+      display: flex; gap: 2.5rem; list-style: none;
+      font-family: var(--font-cond); font-weight: 600; font-size: 0.8rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .nav-links a { color: var(--muted); transition: color 0.2s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1px; background: var(--orange); transform: scaleX(0); transform-origin: left; transition: transform 0.25s; }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      background: var(--orange); color: var(--black);
+      font-family: var(--font-cond); font-weight: 700; font-size: 0.75rem;
+      letter-spacing: 0.2em; text-transform: uppercase; padding: 10px 22px;
+      clip-path: polygon(0 0, 100% 0, 100% 65%, 88% 100%, 0 100%);
+      transition: background 0.2s; cursor: pointer; border: none;
+    }
+    .nav-cta:hover { background: var(--cream); }
+
+    /* ─── PAGE HEADER ─────────────────────────────────────────── */
+    .page-header {
+      padding: 140px 4rem 6rem;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--orange), var(--orange-dim), transparent);
+    }
+    .page-header-deco {
+      position: absolute; right: -2vw; top: 50%; transform: translateY(-50%);
+      font-family: var(--font-display); font-size: 20vw; line-height: 0.85;
+      color: transparent; -webkit-text-stroke: 1px rgba(241,85,35,0.05);
+      user-select: none; pointer-events: none;
+    }
+    .page-header-inner { position: relative; z-index: 1; max-width: 760px; }
+    .page-header-label {
+      font-family: var(--font-cond); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.35em; text-transform: uppercase; color: var(--orange);
+      margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;
+    }
+    .page-header-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--orange); }
+    .page-header h1 {
+      font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 8rem);
+      line-height: 0.9; text-transform: uppercase; color: var(--cream); margin-bottom: 1.5rem;
+    }
+    .page-header h1 span { color: var(--orange); display: block; }
+    .page-header-meta {
+      font-family: var(--font-cond); font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .page-header-meta-dot { width: 4px; height: 4px; background: var(--orange); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+    .page-breadcrumb {
+      margin-bottom: 2rem;
+      font-family: var(--font-cond); font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); display: flex; align-items: center; gap: 8px;
+    }
+    .page-breadcrumb a:hover { color: var(--cream); }
+    .page-breadcrumb-sep { color: var(--orange); }
+
+    /* ─── CONTENT LAYOUT ──────────────────────────────────────── */
+    .content-wrap {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 5rem;
+      padding: 6rem 4rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    /* ─── SIDEBAR ─────────────────────────────────────────────── */
+    .toc {
+      position: sticky;
+      top: 96px;
+    }
+    .toc-title {
+      font-family: var(--font-cond); font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.3em; text-transform: uppercase; color: var(--orange);
+      margin-bottom: 1.2rem; display: flex; align-items: center; gap: 8px;
+    }
+    .toc-title::before { content: ''; display: block; width: 16px; height: 1px; background: var(--orange); }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .toc-list a {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-cond); font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--muted); padding: 7px 10px;
+      border-left: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s, padding-left 0.2s;
+    }
+    .toc-list a:hover { color: var(--cream); border-color: var(--orange); padding-left: 14px; }
+    .toc-list a.active { color: var(--orange); border-color: var(--orange); }
+    .toc-num {
+      font-family: var(--font-display); font-size: 0.9rem; color: var(--border);
+      flex-shrink: 0; transition: color 0.2s;
+    }
+    .toc-list a:hover .toc-num, .toc-list a.active .toc-num { color: var(--orange); }
+
+    .toc-cta {
+      margin-top: 2.5rem;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 1.5rem;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+    }
+    .toc-cta-label {
+      font-family: var(--font-cond); font-size: 0.65rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem;
+    }
+    .toc-cta-text {
+      font-family: var(--font-cond); font-size: 0.95rem; font-weight: 700;
+      text-transform: uppercase; color: var(--cream); line-height: 1.2; margin-bottom: 1rem;
+    }
+    .btn-primary {
+      display: inline-block; background: var(--orange); color: var(--black);
+      font-family: var(--font-cond); font-weight: 700; font-size: 0.72rem;
+      letter-spacing: 0.2em; text-transform: uppercase; padding: 12px 20px;
+      clip-path: polygon(0 0, 100% 0, 100% 65%, 92% 100%, 0 100%);
+      transition: background 0.2s, transform 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--cream); transform: translateY(-2px); }
+
+    /* ─── ARTICLES ────────────────────────────────────────────── */
+    .articles { display: flex; flex-direction: column; gap: 0; }
+
+    .av-article {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .av-article:first-child { padding-top: 0; }
+    .av-article:last-child { border-bottom: none; }
+
+    .av-article-header {
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .av-num {
+      font-family: var(--font-display); font-size: 3.5rem; color: transparent;
+      -webkit-text-stroke: 1px var(--border); line-height: 0.9; flex-shrink: 0;
+      transition: -webkit-text-stroke-color 0.3s;
+      padding-top: 4px;
+    }
+    .av-article:hover .av-num { -webkit-text-stroke-color: var(--orange-dim); }
+    .av-article-title {
+      font-family: var(--font-cond); font-size: 1.4rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream);
+      line-height: 1.1; padding-top: 8px;
+    }
+    .av-article-title span {
+      display: block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.25em;
+      color: var(--orange); margin-bottom: 4px;
+    }
+
+    .av-body { padding-left: 5rem; }
+    .av-body p {
+      font-size: 0.93rem; line-height: 1.85; color: var(--muted); margin-bottom: 1rem;
+    }
+    .av-body p:last-child { margin-bottom: 0; }
+    .av-body strong { color: var(--cream); font-weight: 500; }
+
+    .av-list {
+      list-style: none; display: flex; flex-direction: column; gap: 0.75rem;
+      margin: 1rem 0;
+    }
+    .av-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.93rem; line-height: 1.7; color: var(--muted);
+    }
+    .av-list li::before {
+      content: '';
+      width: 6px; height: 6px; background: var(--orange);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      flex-shrink: 0; margin-top: 7px;
+    }
+
+    .av-sub {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 1.2rem 1.5rem;
+      background: var(--surface); border-left: 2px solid var(--orange);
+      margin-bottom: 0.75rem;
+    }
+    .av-sub-num {
+      font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; color: var(--orange); flex-shrink: 0; padding-top: 2px;
+    }
+    .av-sub p { font-size: 0.9rem; line-height: 1.75; color: var(--muted); margin: 0; }
+
+    .av-highlight {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+    .av-highlight p { font-size: 0.9rem; line-height: 1.75; color: var(--muted); margin: 0; }
+    .av-highlight p + p { margin-top: 0.5rem; }
+
+    /* ─── COOKIE TABLE ────────────────────────────────────────── */
+    .cookie-table {
+      width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem;
+    }
+    .cookie-table th {
+      font-family: var(--font-cond); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange);
+      text-align: left; padding: 10px 14px;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+    }
+    .cookie-table td {
+      padding: 10px 14px; color: var(--muted); line-height: 1.6;
+      border-bottom: 1px solid var(--border);
+    }
+    .cookie-table tr:last-child td { border-bottom: none; }
+    .cookie-table tr:hover td { background: rgba(241,85,35,0.03); }
+    .cookie-badge {
+      display: inline-block; font-family: var(--font-cond); font-size: 0.65rem;
+      font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 3px 8px; background: var(--surface); border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .cookie-badge.nodig { border-color: rgba(241,85,35,0.4); color: var(--orange); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer { background: var(--dark); border-top: 1px solid var(--border); position: relative; overflow: hidden; }
+    footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--orange) 0%, var(--orange-dim) 60%, transparent 100%); }
+    .footer-main { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 4rem; padding: 5rem 4rem 4rem; border-bottom: 1px solid var(--border); }
+    .footer-brand-logo { height: 52px; width: auto; margin-bottom: 1.5rem; display: block; }
+    .footer-brand-text { font-size: 0.88rem; line-height: 1.75; color: var(--muted); max-width: 280px; margin-bottom: 2rem; }
+    .footer-contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 0.9rem; }
+    .footer-contact-icon { width: 32px; height: 32px; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%); color: var(--orange); }
+    .footer-contact-icon svg { width: 14px; height: 14px; }
+    .footer-contact-label { font-family: var(--font-cond); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: block; line-height: 1; margin-bottom: 2px; }
+    .footer-contact-value { font-size: 0.9rem; color: var(--cream); transition: color 0.2s; }
+    .footer-contact-value:hover { color: var(--orange); }
+    .footer-col-title { font-family: var(--font-cond); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.8rem; display: flex; align-items: center; gap: 10px; }
+    .footer-col-title::before { content: ''; display: block; width: 18px; height: 1px; background: var(--orange); }
+    .footer-nav-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-nav-list a { font-family: var(--font-cond); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); transition: color 0.2s, padding-left 0.2s; display: block; }
+    .footer-nav-list a:hover { color: var(--cream); padding-left: 6px; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 1.8rem 4rem; gap: 2rem; flex-wrap: wrap; }
+    .footer-copy { font-size: 0.78rem; color: var(--muted); }
+    .footer-copy span { color: var(--orange); }
+    .footer-legal { display: flex; gap: 2rem; list-style: none; font-family: var(--font-cond); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; }
+    .footer-legal a { color: var(--muted); transition: color 0.2s; }
+    .footer-legal a:hover { color: var(--orange); }
+
+    /* ─── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .content-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .toc { position: static; }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { display: none; }
+      .page-header { padding: 120px 1.5rem 4rem; }
+      .content-wrap { padding: 4rem 1.5rem; }
+      .av-body { padding-left: 0; }
+      .av-article-header { flex-direction: column; gap: 0.5rem; }
+      .av-num { font-size: 2.5rem; }
+      .footer-main { grid-template-columns: 1fr; padding: 3rem 1.5rem 2.5rem; gap: 2.5rem; }
+      .footer-bottom { padding: 1.5rem; flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .cookie-table { font-size: 0.8rem; }
+      .cookie-table th, .cookie-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html"><img src="logo.webp" alt="Aannemersbedrijf Altijd" class="nav-logo-img" /></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#diensten">Diensten</a></li>
+      <li><a href="index.html#over-ons">Over Ons</a></li>
+      <li><a href="index.html#werkwijze">Werkwijze</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="window.location.href='index.html#contact'">Offerte Aanvragen</button>
+  </nav>
+
+  <!-- ─── PAGE HEADER ───────────────────────────────────────────── -->
+  <div class="page-header">
+    <div class="page-header-deco" aria-hidden="true">PB</div>
+    <div class="page-header-inner">
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="page-breadcrumb-sep">›</span>
+        <span style="color:var(--cream)">Privacybeleid</span>
+      </div>
+      <div class="page-header-label">Juridisch</div>
+      <h1>Privacy<span>&amp; Cookies</span></h1>
+      <div class="page-header-meta">
+        <span>Aannemersbedrijf Altijd</span>
+        <div class="page-header-meta-dot"></div>
+        <span>AVG-conform</span>
+        <div class="page-header-meta-dot"></div>
+        <span>Laatst bijgewerkt: april 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CONTENT ───────────────────────────────────────────────── -->
+  <div class="content-wrap">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc">
+      <div class="toc-title">Inhoudsopgave</div>
+      <ul class="toc-list">
+        <li><a href="#art1"><span class="toc-num">01</span> Wie zijn wij</a></li>
+        <li><a href="#art2"><span class="toc-num">02</span> Welke gegevens</a></li>
+        <li><a href="#art3"><span class="toc-num">03</span> Waarom verwerken</a></li>
+        <li><a href="#art4"><span class="toc-num">04</span> Hoe lang bewaren</a></li>
+        <li><a href="#art5"><span class="toc-num">05</span> Delen met derden</a></li>
+        <li><a href="#art6"><span class="toc-num">06</span> Cookies</a></li>
+        <li><a href="#art7"><span class="toc-num">07</span> Beveiliging</a></li>
+        <li><a href="#art8"><span class="toc-num">08</span> Uw rechten</a></li>
+        <li><a href="#art9"><span class="toc-num">09</span> Klachten &amp; toezicht</a></li>
+        <li><a href="#art10"><span class="toc-num">10</span> Wijzigingen</a></li>
+      </ul>
+      <div class="toc-cta">
+        <div class="toc-cta-label">Vragen?</div>
+        <div class="toc-cta-text">Neem contact met ons op</div>
+        <a href="mailto:info@aannemersbedrijfaltijd.nl" class="btn-primary">Stuur een mail</a>
+      </div>
+    </aside>
+
+    <!-- Articles -->
+    <main class="articles">
+
+      <div class="av-article" id="art1">
+        <div class="av-article-header">
+          <div class="av-num">01</div>
+          <div class="av-article-title">
+            <span>Artikel 1</span>
+            Wie zijn wij
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Dit privacybeleid is opgesteld door <strong>Aannemersbedrijf Altijd</strong>, ingeschreven bij de Kamer van Koophandel. Wij zijn verantwoordelijk voor de verwerking van uw persoonsgegevens zoals beschreven in dit beleid.</p>
+          <div class="av-highlight">
+            <p><strong>Aannemersbedrijf Altijd</strong></p>
+            <p>E-mail: <a href="mailto:info@aannemersbedrijfaltijd.nl" style="color:var(--orange)">info@aannemersbedrijfaltijd.nl</a> &nbsp;·&nbsp; Telefoon: 348 234 960</p>
+          </div>
+          <p>Voor vragen over dit beleid of over de verwerking van uw gegevens kunt u altijd contact met ons opnemen via bovenstaande gegevens.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art2">
+        <div class="av-article-header">
+          <div class="av-num">02</div>
+          <div class="av-article-title">
+            <span>Artikel 2</span>
+            Welke gegevens verzamelen wij
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Wij verzamelen alleen de persoonsgegevens die noodzakelijk zijn voor het uitvoeren van onze diensten of voor het verwerken van uw offerte-aanvraag. Dit betreft:</p>
+          <ul class="av-list">
+            <li>Naam en adresgegevens</li>
+            <li>Telefoonnummer en e-mailadres</li>
+            <li>Omschrijving van de gewenste werkzaamheden</li>
+            <li>Gegevens van de locatie waar werkzaamheden plaatsvinden</li>
+            <li>Communicatie die u met ons voert (e-mail, telefoon, contactformulier)</li>
+            <li>Factuurgegevens bij opdrachtbevestiging</li>
+          </ul>
+          <p>Wij verzamelen geen bijzondere persoonsgegevens (zoals gezondheids- of strafrechtelijke gegevens) en vragen ook niet om BSN-nummers of geboortedatums, tenzij dit wettelijk vereist is.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art3">
+        <div class="av-article-header">
+          <div class="av-num">03</div>
+          <div class="av-article-title">
+            <span>Artikel 3</span>
+            Waarom verwerken wij uw gegevens
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Wij verwerken uw persoonsgegevens uitsluitend voor de volgende doeleinden en op de volgende grondslagen:</p>
+          <div class="av-sub">
+            <div class="av-sub-num">3.1</div>
+            <p><strong style="color:var(--cream)">Uitvoeren van de overeenkomst</strong> — Om een offerte op te stellen, werkzaamheden in te plannen en het project correct uit te voeren. Grondslag: uitvoering van een overeenkomst.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">3.2</div>
+            <p><strong style="color:var(--cream)">Communicatie</strong> — Om contact met u op te nemen over uw aanvraag, werkzaamheden of facturatie. Grondslag: gerechtvaardigd belang.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">3.3</div>
+            <p><strong style="color:var(--cream)">Wettelijke verplichtingen</strong> — Voor het bijhouden van de boekhouding en het voldoen aan fiscale verplichtingen. Grondslag: wettelijke verplichting.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">3.4</div>
+            <p><strong style="color:var(--cream)">Kwaliteitsverbetering</strong> — Om onze dienstverlening te verbeteren op basis van uw feedback of eerdere opdrachten. Grondslag: gerechtvaardigd belang.</p>
+          </div>
+          <p>Wij gebruiken uw gegevens nooit voor direct marketing of het doorverkopen aan derden zonder uw uitdrukkelijke toestemming.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art4">
+        <div class="av-article-header">
+          <div class="av-num">04</div>
+          <div class="av-article-title">
+            <span>Artikel 4</span>
+            Hoe lang bewaren wij uw gegevens
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Wij bewaren uw persoonsgegevens niet langer dan noodzakelijk voor het doel waarvoor ze zijn verzameld, of zolang de wet dit vereist.</p>
+          <ul class="av-list">
+            <li>Offertegegevens zonder opdracht: <strong>maximaal 1 jaar</strong></li>
+            <li>Klantgegevens bij een uitgevoerde opdracht: <strong>7 jaar</strong> (fiscale bewaarplicht)</li>
+            <li>E-mailcorrespondentie: <strong>2 jaar</strong> na afsluiting van het project</li>
+            <li>Facturen en boekhoudkundige stukken: <strong>7 jaar</strong> (wettelijk verplicht)</li>
+          </ul>
+          <p>Na het verstrijken van de bewaartermijn worden uw gegevens veilig en definitief verwijderd of geanonimiseerd.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art5">
+        <div class="av-article-header">
+          <div class="av-num">05</div>
+          <div class="av-article-title">
+            <span>Artikel 5</span>
+            Delen met derden
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Aannemersbedrijf Altijd verkoopt uw gegevens nooit aan derden. Wij delen uw gegevens alleen in de volgende situaties:</p>
+          <div class="av-sub">
+            <div class="av-sub-num">5.1</div>
+            <p><strong style="color:var(--cream)">Onderaannemers &amp; leveranciers</strong> — Indien voor de uitvoering van uw opdracht gebruik wordt gemaakt van onderaannemers of materialleveranciers, worden alleen de noodzakelijke gegevens (adres, contactgegevens) gedeeld. Zij zijn gebonden aan vertrouwelijkheid.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">5.2</div>
+            <p><strong style="color:var(--cream)">Administratieve dienstverleners</strong> — Zoals boekhoudprogramma's of e-maildiensten. Deze verwerkers verwerken uw gegevens uitsluitend in onze opdracht en conform een verwerkersovereenkomst.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">5.3</div>
+            <p><strong style="color:var(--cream)">Wettelijke verplichting</strong> — Indien wij wettelijk verplicht zijn gegevens te verstrekken aan een bevoegde autoriteit, zoals de Belastingdienst of een rechterlijk bevel.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="av-article" id="art6">
+        <div class="av-article-header">
+          <div class="av-num">06</div>
+          <div class="av-article-title">
+            <span>Artikel 6</span>
+            Cookies
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Onze website gebruikt <strong>uitsluitend functionele en analytische cookies</strong> die geen inbreuk maken op uw privacy. Wij gebruiken geen tracking-cookies van derde partijen voor advertentiedoeleinden.</p>
+          <table class="cookie-table">
+            <thead>
+              <tr>
+                <th>Cookie</th>
+                <th>Doel</th>
+                <th>Bewaartermijn</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code style="color:var(--cream);font-size:0.82rem;">sessie</code></td>
+                <td>Onthouden van uw sessie tijdens het bezoek</td>
+                <td>Sessie (wordt verwijderd bij sluiten browser)</td>
+                <td><span class="cookie-badge nodig">Noodzakelijk</span></td>
+              </tr>
+              <tr>
+                <td><code style="color:var(--cream);font-size:0.82rem;">formulier_voorkeur</code></td>
+                <td>Onthouden van ingevulde formuliergegevens</td>
+                <td>Sessie</td>
+                <td><span class="cookie-badge nodig">Noodzakelijk</span></td>
+              </tr>
+              <tr>
+                <td><code style="color:var(--cream);font-size:0.82rem;">_ga, _gid</code></td>
+                <td>Anonieme bezoekersstatistieken (Google Analytics)</td>
+                <td>2 jaar / 24 uur</td>
+                <td><span class="cookie-badge">Analytisch</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>U kunt cookies weigeren of verwijderen via de instellingen van uw browser. Let op: het weigeren van functionele cookies kan de werking van het contactformulier beïnvloeden.</p>
+          <div class="av-highlight">
+            <p>Voor analytische cookies (Google Analytics) vragen wij uw toestemming bij uw eerste bezoek via een cookiebanner. U kunt uw toestemming te allen tijde intrekken door uw browserinstellingen aan te passen of contact met ons op te nemen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="av-article" id="art7">
+        <div class="av-article-header">
+          <div class="av-num">07</div>
+          <div class="av-article-title">
+            <span>Artikel 7</span>
+            Beveiliging van uw gegevens
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Wij nemen de bescherming van uw gegevens serieus en treffen passende maatregelen om misbruik, verlies, onbevoegde toegang en ongewenste openbaarmaking te voorkomen:</p>
+          <ul class="av-list">
+            <li>Versleutelde verbinding (HTTPS/TLS) op onze website</li>
+            <li>Toegang tot persoonsgegevens beperkt tot medewerkers die deze nodig hebben</li>
+            <li>Regelmatige back-ups van gegevens</li>
+            <li>Sterke wachtwoorden en tweefactorauthenticatie op bedrijfssystemen</li>
+          </ul>
+          <p>Heeft u het idee dat uw gegevens toch niet goed beveiligd zijn, of heeft u aanwijzingen van misbruik? Neem dan direct contact op via <a href="mailto:info@aannemersbedrijfaltijd.nl" style="color:var(--orange)">info@aannemersbedrijfaltijd.nl</a>.</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art8">
+        <div class="av-article-header">
+          <div class="av-num">08</div>
+          <div class="av-article-title">
+            <span>Artikel 8</span>
+            Uw rechten
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Op grond van de Algemene Verordening Gegevensbescherming (AVG) heeft u de volgende rechten met betrekking tot uw persoonsgegevens:</p>
+          <div class="av-sub">
+            <div class="av-sub-num">8.1</div>
+            <p><strong style="color:var(--cream)">Inzage</strong> — U heeft het recht om te weten welke persoonsgegevens wij van u verwerken.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">8.2</div>
+            <p><strong style="color:var(--cream)">Rectificatie</strong> — U kunt onjuiste of onvolledige gegevens laten corrigeren.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">8.3</div>
+            <p><strong style="color:var(--cream)">Verwijdering</strong> — U kunt verzoeken uw gegevens te verwijderen ('recht om vergeten te worden'), voor zover wij hier niet wettelijk toe verplicht zijn.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">8.4</div>
+            <p><strong style="color:var(--cream)">Beperking</strong> — U kunt de verwerking van uw gegevens tijdelijk laten beperken.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">8.5</div>
+            <p><strong style="color:var(--cream)">Overdraagbaarheid</strong> — U kunt uw gegevens in een gestructureerd, gangbaar formaat opvragen om door te sturen naar een andere organisatie.</p>
+          </div>
+          <div class="av-sub">
+            <div class="av-sub-num">8.6</div>
+            <p><strong style="color:var(--cream)">Bezwaar</strong> — U kunt bezwaar maken tegen de verwerking van uw gegevens op basis van gerechtvaardigd belang.</p>
+          </div>
+          <p>U kunt uw verzoek indienen via <a href="mailto:info@aannemersbedrijfaltijd.nl" style="color:var(--orange)">info@aannemersbedrijfaltijd.nl</a>. Wij reageren binnen <strong>4 weken</strong> op uw verzoek. Om uw identiteit te verifiëren kunnen wij u vragen een kopie van een legitimatiebewijs te sturen (met BSN en pasfoto afgeschermd).</p>
+        </div>
+      </div>
+
+      <div class="av-article" id="art9">
+        <div class="av-article-header">
+          <div class="av-num">09</div>
+          <div class="av-article-title">
+            <span>Artikel 9</span>
+            Klachten &amp; toezichthouder
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Bent u van mening dat wij niet correct omgaan met uw persoonsgegevens? Neem dan eerst contact met ons op via <a href="mailto:info@aannemersbedrijfaltijd.nl" style="color:var(--orange)">info@aannemersbedrijfaltijd.nl</a>. Wij lossen klachten graag in goed overleg op.</p>
+          <p>Komen we er samen niet uit, dan heeft u het recht een klacht in te dienen bij de <strong>Autoriteit Persoonsgegevens</strong> (AP), de Nederlandse toezichthouder op het gebied van privacy:</p>
+          <div class="av-highlight">
+            <p><strong>Autoriteit Persoonsgegevens</strong></p>
+            <p>Website: autoriteitpersoonsgegevens.nl &nbsp;·&nbsp; Telefoon: 088 – 180 52 50</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="av-article" id="art10">
+        <div class="av-article-header">
+          <div class="av-num">10</div>
+          <div class="av-article-title">
+            <span>Artikel 10</span>
+            Wijzigingen in dit beleid
+          </div>
+        </div>
+        <div class="av-body">
+          <p>Aannemersbedrijf Altijd behoudt zich het recht voor dit privacybeleid op elk moment te wijzigen. Wijzigingen worden gepubliceerd op deze pagina met een bijgewerkte datum. Wij raden u aan deze pagina regelmatig te raadplegen.</p>
+          <p>Bij ingrijpende wijzigingen die betrekking hebben op de verwerking van uw gegevens, stellen wij u hiervan op de hoogte per e-mail indien wij uw contactgegevens beschikken.</p>
+          <p style="color:var(--muted);font-size:0.85rem;margin-top:1.5rem;">Versie: april 2026 — Dit beleid is opgesteld in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG / GDPR).</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-main">
+      <div>
+        <img src="logo.webp" alt="Aannemersbedrijf Altijd" class="footer-brand-logo" />
+        <p class="footer-brand-text">Uw betrouwbare dakdekker en aannemer actief door heel Nederland. Altijd vakwerk, altijd op tijd.</p>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg></div>
+          <div><span class="footer-contact-label">Telefoon</span><a href="tel:+31348234960" class="footer-contact-value">348 234 960</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><span class="footer-contact-label">E-mail</span><a href="mailto:info@aannemersbedrijfaltijd.nl" class="footer-contact-value">info@aannemersbedrijfaltijd.nl</a></div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Diensten</div>
+        <ul class="footer-nav-list">
+          <li><a href="hellende-daken.html">Hellende daken</a></li>
+          <li><a href="platte-daken.html">Platte daken</a></li>
+          <li><a href="dakgoten-zink.html">Dakgoten zink</a></li>
+          <li><a href="timmerwerk.html">Timmerwerk</a></li>
+          <li><a href="schilderwerk.html">Schilderwerk</a></li>
+          <li><a href="verduurzaming.html">Verduurzaming</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigatie</div>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#over-ons">Over Ons</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="algemene-voorwaarden.html">Algemene Voorwaarden</a></li>
+          <li><a href="privacy.html" style="color:var(--orange)">Privacy &amp; Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 <span>Aannemersbedrijf Altijd</span>. Alle rechten voorbehouden.</span>
+      <ul class="footer-legal">
+        <li><a href="privacy.html" style="color:var(--orange)">Privacy</a></li>
+        <li><a href="algemene-voorwaarden.html">Algemene Voorwaarden</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const articles = document.querySelectorAll('.av-article');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    articles.forEach(a => observer.observe(a));
+  </script>
+
+</body>
+</html>

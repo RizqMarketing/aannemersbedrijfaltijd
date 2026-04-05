@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kalkema Dienstverlening — Grondverzet &amp; Machineverhuur</title>
+  <title>Aannemersbedrijf Altijd — Bouw &amp; Renovatie</title>
+  <meta name="description" content="Aannemersbedrijf Altijd — uw betrouwbare partner voor bouw, renovatie en aanbouw. Snel, vakkundig en altijd scherp geprijsd." />
+  <meta name="keywords" content="aannemersbedrijf, aannemer, bouw, renovatie, verbouw, Altijd" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Aannemersbedrijf Altijd" />
+  <meta property="og:description" content="Uw betrouwbare aannemer voor bouw en renovatie. Vraag vandaag nog een vrijblijvende offerte aan." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -15,8 +21,8 @@
       --dark:      #0F0F0F;
       --surface:   #161616;
       --surface2:  #1E1E1C;
-      --orange:    #E00A25;
-      --orange-dim: #8A0018;
+      --orange:    #f15523;
+      --orange-dim: #b03a10;
       --gold:      #B89050;
       --cream:     #EDE8DF;
       --muted:     #5A5750;
@@ -74,14 +80,11 @@
       text-transform: uppercase;
       display: flex; align-items: center; gap: 12px;
     }
-    .nav-logo-mark {
-      width: 36px; height: 36px;
-      background: var(--orange);
-      clip-path: polygon(0 0, 100% 0, 100% 60%, 60% 100%, 0 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.85rem;
-      color: var(--black);
-      font-weight: 900;
+    .nav-logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 0 0 transparent);
     }
     .nav-links {
       display: flex; gap: 2.5rem; list-style: none;
@@ -139,14 +142,14 @@
       content: '';
       position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(224,114,36,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(224,114,36,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(241,85,35,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(241,85,35,0.04) 1px, transparent 1px);
       background-size: 60px 60px;
     }
     .hero-bg::after {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 80% 110%, rgba(224,114,36,0.12) 0%, transparent 65%),
+      background: radial-gradient(ellipse 70% 60% at 80% 110%, rgba(241,85,35,0.12) 0%, transparent 65%),
                   radial-gradient(ellipse 50% 70% at -10% 50%, rgba(184,144,80,0.06) 0%, transparent 60%),
                   linear-gradient(180deg, transparent 40%, rgba(7,7,7,0.95) 100%);
     }
@@ -160,7 +163,7 @@
       font-size: 30vw;
       line-height: 0.85;
       color: transparent;
-      -webkit-text-stroke: 1px rgba(224,114,36,0.07);
+      -webkit-text-stroke: 1px rgba(241,85,35,0.07);
       user-select: none;
       pointer-events: none;
       letter-spacing: -0.02em;
@@ -718,8 +721,8 @@
       content: '';
       position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(224,10,37,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(224,10,37,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(241,85,35,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(241,85,35,0.03) 1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none;
     }
@@ -842,7 +845,7 @@
       font-family: var(--font-display);
       font-size: 20vw;
       color: transparent;
-      -webkit-text-stroke: 1px rgba(224,114,36,0.05);
+      -webkit-text-stroke: 1px rgba(241,85,35,0.05);
       pointer-events: none;
       user-select: none;
     }
@@ -931,33 +934,128 @@
     footer {
       background: var(--dark);
       border-top: 1px solid var(--border);
-      padding: 3rem 4rem;
-      display: flex;
-      align-items: center; justify-content: space-between;
-      gap: 2rem;
+      position: relative;
+      overflow: hidden;
     }
-    .footer-logo {
+    footer::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange) 0%, var(--orange-dim) 60%, transparent 100%);
+    }
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 4rem;
+      padding: 5rem 4rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-brand {}
+    .footer-brand-logo {
+      height: 52px; width: auto;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .footer-brand-text {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 280px;
+      margin-bottom: 2rem;
+    }
+    .footer-contact-item {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 0.9rem;
+    }
+    .footer-contact-icon {
+      width: 32px; height: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%);
+      color: var(--orange);
+    }
+    .footer-contact-icon svg { width: 14px; height: 14px; }
+    .footer-contact-label {
       font-family: var(--font-cond);
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.18em;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .footer-contact-value {
+      font-size: 0.9rem;
+      color: var(--cream);
+      transition: color 0.2s;
+    }
+    .footer-contact-value:hover { color: var(--orange); }
+
+    .footer-col-title {
+      font-family: var(--font-cond);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.8rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .footer-col-title::before {
+      content: '';
+      display: block; width: 18px; height: 1px;
+      background: var(--orange);
+    }
+    .footer-nav-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 0.7rem;
+    }
+    .footer-nav-list a {
+      font-family: var(--font-cond);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s, padding-left 0.2s;
+      display: block;
+    }
+    .footer-nav-list a:hover { color: var(--cream); padding-left: 6px; }
+
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.8rem 4rem;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
     .footer-copy {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--muted);
       letter-spacing: 0.05em;
     }
-    .footer-links {
+    .footer-copy span { color: var(--orange); }
+    .footer-legal {
       display: flex; gap: 2rem; list-style: none;
       font-family: var(--font-cond);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
-    .footer-links a { color: var(--muted); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--orange); }
+    .footer-legal a { color: var(--muted); transition: color 0.2s; }
+    .footer-legal a:hover { color: var(--orange); }
+
+    @media (max-width: 1100px) {
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      .footer-main { grid-template-columns: 1fr; padding: 3rem 1.5rem 2.5rem; gap: 2.5rem; }
+      .footer-bottom { padding: 1.5rem 1.5rem; flex-direction: column; align-items: flex-start; gap: 1rem; }
+    }
 
     /* ─── Keyframes ──────────────────────────────────────────── */
     @keyframes fadeUp {
@@ -987,6 +1085,7 @@
     /* ─── Responsive ─────────────────────────────────────────── */
     @media (max-width: 1100px) {
       .diensten-grid { grid-template-columns: repeat(3, 1fr) !important; }
+      /* 12 diensten: 4 col → 3 col op medium scherm */
       .stappen { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
       .stappen::after { display: none; }
       .stap { padding: 0; }
@@ -1038,15 +1137,249 @@
       footer { flex-direction: column; text-align: center; }
       .footer-links { flex-wrap: wrap; justify-content: center; }
     }
+
+    /* ─── POPUP OVERLAY ─────────────────────────────────────── */
+    .popup-overlay {
+      position: fixed; inset: 0;
+      z-index: 9000;
+      display: flex; align-items: center; justify-content: center;
+      padding: 1.5rem;
+      background: rgba(7,7,7,0.85);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .popup-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .popup {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      width: 100%;
+      max-width: 680px;
+      max-height: 92vh;
+      overflow-y: auto;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%);
+      transform: translateY(32px) scale(0.97);
+      transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
+      opacity: 0;
+    }
+    .popup-overlay.open .popup {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    /* accent bar top */
+    .popup-bar {
+      height: 4px;
+      background: linear-gradient(90deg, var(--orange) 0%, var(--orange-dim) 100%);
+    }
+
+    .popup-inner {
+      padding: 2.5rem 3rem 3rem;
+    }
+
+    .popup-header {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      margin-bottom: 2rem; gap: 1rem;
+    }
+    .popup-title-wrap {}
+    .popup-label {
+      font-family: var(--font-cond);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .popup-label::before {
+      content: '';
+      display: block; width: 24px; height: 1px;
+      background: var(--orange);
+    }
+    .popup-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 0.9;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+    .popup-title span { color: var(--orange); display: block; }
+
+    .popup-close {
+      flex-shrink: 0;
+      width: 40px; height: 40px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%);
+    }
+    .popup-close:hover { background: var(--orange); color: var(--black); border-color: var(--orange); }
+
+    .popup-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .popup-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .popup-form .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .popup-form .form-label {
+      font-family: var(--font-cond);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .popup-form .form-input,
+    .popup-form .form-select,
+    .popup-form .form-textarea {
+      background: var(--dark);
+      border: 1px solid var(--border);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .popup-form .form-input:focus,
+    .popup-form .form-select:focus,
+    .popup-form .form-textarea:focus { border-color: var(--orange); }
+    .popup-form .form-textarea { resize: vertical; min-height: 110px; }
+    .popup-form .form-select option { background: var(--dark); }
+
+    .popup-submit-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .popup-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+    }
+
+    /* success state */
+    .popup-success {
+      display: none;
+      flex-direction: column; align-items: center;
+      text-align: center; gap: 1.2rem;
+      padding: 1rem 0 1.5rem;
+    }
+    .popup-success-icon {
+      width: 64px; height: 64px;
+      background: var(--orange);
+      clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--black);
+    }
+    .popup-success-title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      color: var(--cream);
+      line-height: 1;
+    }
+    .popup-success-text {
+      font-size: 0.9rem; color: var(--muted); line-height: 1.7; max-width: 360px;
+    }
+
+    @media (max-width: 600px) {
+      .popup-inner { padding: 1.8rem 1.5rem 2rem; }
+      .popup-form .form-row { grid-template-columns: 1fr; }
+      .popup-submit-row { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- ─── POPUP ───────────────────────────────────────────────── -->
+  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-label="Offerte aanvragen">
+    <div class="popup" id="popup">
+      <div class="popup-bar"></div>
+      <div class="popup-inner">
+        <div class="popup-header">
+          <div class="popup-title-wrap">
+            <div class="popup-label">Gratis &amp; vrijblijvend</div>
+            <div class="popup-title">Offerte<span>Aanvragen</span></div>
+          </div>
+          <button class="popup-close" id="popup-close" aria-label="Sluiten">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <form class="popup-form" id="popup-form" onsubmit="handlePopupSubmit(event)" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="p-naam">Naam</label>
+              <input class="form-input" id="p-naam" type="text" placeholder="Uw naam" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="p-telefoon">Telefoon</label>
+              <input class="form-input" id="p-telefoon" type="tel" placeholder="+31 6 00 000 000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="p-email">E-mailadres</label>
+            <input class="form-input" id="p-email" type="email" placeholder="u@voorbeeld.nl" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="p-dienst">Dienst</label>
+            <select class="form-select" id="p-dienst">
+              <option value="">Selecteer een dienst</option>
+              <option>Hellende daken</option>
+              <option>Platte daken</option>
+              <option>Dakgoten zink</option>
+              <option>Schoorsteen renovatie</option>
+              <option>Lood renovatie</option>
+              <option>Gipsbeplating</option>
+              <option>Timmerwerk</option>
+              <option>Schilderwerk</option>
+              <option>Stukadoorswerk</option>
+              <option>Maatwerk</option>
+              <option>Verduurzaming</option>
+              <option>Meerdere / overig</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="p-bericht">Omschrijving project</label>
+            <textarea class="form-textarea" id="p-bericht" placeholder="Beschrijf uw project kort…" required></textarea>
+          </div>
+          <div class="popup-submit-row">
+            <span class="popup-note">Wij reageren doorgaans binnen 24 uur.</span>
+            <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">
+              Verstuur Aanvraag
+            </button>
+          </div>
+        </form>
+
+        <div class="popup-success" id="popup-success">
+          <div class="popup-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+          </div>
+          <div class="popup-success-title">Aanvraag<span style="color:var(--orange)"> Ontvangen</span></div>
+          <p class="popup-success-text">Bedankt! Wij nemen zo snel mogelijk contact met u op, uiterlijk binnen 24 uur.</p>
+          <button class="btn-primary" style="border:none;cursor:pointer;margin-top:0.5rem;" onclick="closePopup()">Sluiten</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ─── NAV ──────────────────────────────────────────────── -->
   <nav id="main-nav">
     <div class="nav-logo">
-      <div class="nav-logo-mark">K</div>
-      Kalkema Dienstverlening
+      <img src="logo.webp" alt="Aannemersbedrijf Altijd" class="nav-logo-img" />
     </div>
     <ul class="nav-links">
       <li><a href="#diensten">Diensten</a></li>
@@ -1054,7 +1387,7 @@
       <li><a href="#werkwijze">Werkwijze</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <button class="nav-cta" onclick="openPopup()">
       Offerte Aanvragen
     </button>
   </nav>
@@ -1062,26 +1395,26 @@
   <!-- ─── HERO ─────────────────────────────────────────────── -->
   <section class="hero" id="home">
     <div class="hero-bg"></div>
-    <div class="hero-deco" aria-hidden="true">K</div>
+    <div class="hero-deco" aria-hidden="true">A</div>
     <div class="hero-bar" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <div class="hero-label">Direct een ervaren grondwerker nodig?</div>
+      <div class="hero-label">Dakdekker &amp; aannemer door heel Nederland</div>
 
       <h1 class="hero-title">
-        <span>Kalkema</span>
-        <span>Dienst&shy;verlening</span>
+        <span>Aannemers&shy;bedrijf</span>
+        <span>Altijd</span>
       </h1>
 
-      <p class="hero-sub">Grond bewegen. Dromen realiseren.</p>
+      <p class="hero-sub">Van dak tot gevel. Altijd vakwerk.</p>
 
       <p class="hero-tagline">
-        Vakmanschap in grond, steen en staal — voor particulieren en bedrijven in Lelystad en omgeving.
+        Dakdekker, aannemer en renovatiespecialist door heel Nederland — voor particulieren en bedrijven.
         Snel, betrouwbaar en altijd scherp geprijsd.
       </p>
 
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Offerte Aanvragen</a>
+        <a href="#contact" class="btn-primary" onclick="event.preventDefault();openPopup()">Offerte Aanvragen</a>
         <a href="#diensten" class="btn-secondary">
           Bekijk diensten
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1104,17 +1437,15 @@
       <div class="ticker-set">
         <div class="ticker-item"><div class="ticker-icon"></div> Gratis &amp; Vrijblijvende Offerte</div>
         <div class="ticker-sep"></div>
-        <div class="ticker-item"><div class="ticker-icon"></div> Vakkundig Uitgevoerd</div>
+        <div class="ticker-item"><div class="ticker-icon"></div> Hellende &amp; Platte Daken</div>
         <div class="ticker-sep"></div>
         <div class="ticker-item"><div class="ticker-icon"></div> €0 Verborgen Kosten</div>
         <div class="ticker-sep"></div>
         <div class="ticker-item"><div class="ticker-icon"></div> Particulier &amp; Zakelijk</div>
         <div class="ticker-sep"></div>
-        <div class="ticker-item"><div class="ticker-icon"></div> Lelystad &amp; Omgeving</div>
+        <div class="ticker-item"><div class="ticker-icon"></div> Heel Nederland</div>
         <div class="ticker-sep"></div>
         <div class="ticker-item"><div class="ticker-icon"></div> Reactie Binnen 24 Uur</div>
-        <div class="ticker-sep"></div>
-        <div class="ticker-item"><div class="ticker-icon"></div> Modern Machinepark</div>
         <div class="ticker-sep"></div>
         <div class="ticker-item"><div class="ticker-icon"></div> Strak &amp; Betrouwbaar</div>
         <div class="ticker-sep"></div>
@@ -1123,17 +1454,15 @@
       <div class="ticker-set">
         <div class="ticker-item"><div class="ticker-icon"></div> Gratis &amp; Vrijblijvende Offerte</div>
         <div class="ticker-sep"></div>
-        <div class="ticker-item"><div class="ticker-icon"></div> Vakkundig Uitgevoerd</div>
+        <div class="ticker-item"><div class="ticker-icon"></div> Hellende &amp; Platte Daken</div>
         <div class="ticker-sep"></div>
         <div class="ticker-item"><div class="ticker-icon"></div> €0 Verborgen Kosten</div>
         <div class="ticker-sep"></div>
         <div class="ticker-item"><div class="ticker-icon"></div> Particulier &amp; Zakelijk</div>
         <div class="ticker-sep"></div>
-        <div class="ticker-item"><div class="ticker-icon"></div> Lelystad &amp; Omgeving</div>
+        <div class="ticker-item"><div class="ticker-icon"></div> Heel Nederland</div>
         <div class="ticker-sep"></div>
         <div class="ticker-item"><div class="ticker-icon"></div> Reactie Binnen 24 Uur</div>
-        <div class="ticker-sep"></div>
-        <div class="ticker-item"><div class="ticker-icon"></div> Modern Machinepark</div>
         <div class="ticker-sep"></div>
         <div class="ticker-item"><div class="ticker-icon"></div> Strak &amp; Betrouwbaar</div>
         <div class="ticker-sep"></div>
@@ -1149,114 +1478,176 @@
         <h2 class="section-title reveal reveal-delay-1">Onze<br/>Diensten</h2>
       </div>
       <p class="section-desc reveal reveal-delay-2">
-        Van grondverzet tot tuinaanleg — wij bieden complete oplossingen voor uw grond- en bouwproject.
-        Snel, betrouwbaar en met de juiste machines.
+        Van dak tot gevel — wij bieden complete bouw- en renovatiediensten voor particulieren en bedrijven.
+        Vakkundig, betrouwbaar en altijd scherp geprijsd.
       </p>
     </div>
 
-    <div class="diensten-grid" style="grid-template-columns: repeat(5, 1fr);">
-      <!-- Grondwerk -->
+    <div class="diensten-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <!-- 01 Hellende daken -->
       <div class="dienst-card reveal reveal-delay-1">
         <div class="dienst-num" aria-hidden="true">01</div>
         <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M4 40h40M8 40V28l8-8 8 4 8-12 8 8V40"/>
-          <path d="M20 40V32h8v8" stroke-width="1.5"/>
-          <circle cx="38" cy="16" r="3"/>
+          <path d="M4 36h40M24 8L4 36M24 8l20 28"/>
+          <path d="M14 36V24M34 36V24"/>
         </svg>
-        <div class="dienst-name">Grondwerk</div>
+        <div class="dienst-name">Hellende daken</div>
         <p class="dienst-text">
-          Afgraven, egaliseren, ophogen en saneren. Wij verzorgen alle grondwerkzaamheden voor bouw- en infraprojecten, groot en klein.
+          Leggen, herstellen en onderhouden van hellende daken met dakpannen, leien of bitumen — vakkundig en duurzaam uitgevoerd.
         </p>
-        <a href="#contact" class="dienst-link">
-          Meer info
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <a href="hellende-daken.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
-      <!-- Machineverhuur -->
+      <!-- 02 Platte daken -->
       <div class="dienst-card reveal reveal-delay-2">
         <div class="dienst-num" aria-hidden="true">02</div>
         <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="4" y="28" width="28" height="14" rx="1"/>
-          <path d="M32 34h8l4-8V22H32v12z"/>
-          <circle cx="12" cy="42" r="4"/>
-          <circle cx="36" cy="42" r="4"/>
-          <path d="M4 34V20l8-6h12l8 10"/>
+          <rect x="4" y="18" width="40" height="6" rx="1"/>
+          <path d="M8 24v14M40 24v14M8 38h32"/>
+          <path d="M12 18V12h24v6"/>
         </svg>
-        <div class="dienst-name">Machineverhuur</div>
+        <div class="dienst-name">Platte daken</div>
         <p class="dienst-text">
-          Huur onze professionele grondverzetmachines: graafmachines, dumptrucks, trilplaten en meer — met of zonder machinist.
+          Aanleg en renovatie van platte daken met EPDM, PVC of bitumen. Waterdicht, isolerend en jarenlang onderhoudsvrij.
         </p>
-        <a href="#contact" class="dienst-link">
-          Meer info
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <a href="platte-daken.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
-      <!-- Straatwerk -->
+      <!-- 03 Dakgoten zink -->
       <div class="dienst-card reveal reveal-delay-3">
         <div class="dienst-num" aria-hidden="true">03</div>
         <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M4 44h40"/>
-          <rect x="4" y="36" width="40" height="8" rx="0"/>
-          <path d="M8 36V28M14 36V28M20 36V28M26 36V28M32 36V28M38 36V28"/>
-          <path d="M4 28h40M18 28l-4-8h16l-4 8"/>
+          <path d="M4 20h40"/>
+          <path d="M4 20c0 4 3 6 6 6h28c3 0 6-2 6-6"/>
+          <path d="M38 26v14M10 26v6"/>
+          <path d="M7 32h6"/>
         </svg>
-        <div class="dienst-name">Straatwerk</div>
+        <div class="dienst-name">Dakgoten zink</div>
         <p class="dienst-text">
-          Opritten, parkeerplaatsen, bestrating en trottoirs. Solide onderfundering, netjes afgewerkt met klinkers, tegels of asfalt.
+          Plaatsen en vervangen van zinken dakgoten en afvoerpijpen. Degelijk vakwerk dat regenwater correct afvoert.
         </p>
-        <a href="#contact" class="dienst-link">
-          Meer info
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <a href="dakgoten-zink.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
-      <!-- Tuinaanleg -->
+      <!-- 04 Schoorsteen renovatie -->
       <div class="dienst-card reveal reveal-delay-4">
         <div class="dienst-num" aria-hidden="true">04</div>
         <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M24 44V24"/>
-          <path d="M24 24C24 24 14 18 14 8c0 0 5 4 10 4s10-4 10-4c0 10-10 16-10 16z"/>
-          <path d="M24 32C24 32 16 28 12 22M24 38C24 38 32 34 36 28"/>
-          <path d="M4 44h40"/>
+          <rect x="16" y="4" width="16" height="26" rx="1"/>
+          <path d="M12 30h24v4H12zM4 44h40M8 44V34"/>
+          <path d="M40 44V34M20 4V2M28 4V2"/>
         </svg>
-        <div class="dienst-name">Tuinaanleg</div>
+        <div class="dienst-name">Schoorsteen renovatie</div>
         <p class="dienst-text">
-          Van ontwerp tot realisatie: nivellering, drainage, bestrating en beplanting. Wij geven uw buitenruimte karakter en functie.
+          Herstel en renovatie van schoorstenen: voegwerk, kap, loodslabben en reiniging. Veilig en waterdicht.
         </p>
-        <a href="#contact" class="dienst-link">
-          Meer info
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <a href="schoorsteen-renovatie.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-      <!-- Rijbodems & Longeercirkels -->
-      <div class="dienst-card reveal" style="transition-delay:0.5s">
+
+      <!-- 05 Lood renovatie -->
+      <div class="dienst-card reveal reveal-delay-1">
         <div class="dienst-num" aria-hidden="true">05</div>
         <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="24" cy="24" r="18"/>
-          <circle cx="24" cy="24" r="8"/>
-          <path d="M24 6v4M24 38v4M6 24h4M38 24h4"/>
-          <path d="M24 16v8l6 4"/>
+          <path d="M8 36L24 12l16 24"/>
+          <path d="M4 36h40"/>
+          <path d="M16 36v-8h16v8"/>
+          <path d="M20 28v-6h8v6"/>
         </svg>
-        <div class="dienst-name">Rijbodems &amp; Longeercirkels</div>
+        <div class="dienst-name">Lood renovatie</div>
         <p class="dienst-text">
-          Aanleg en onderhoud van rijbodems en longeercirkels voor de paardenhouderij. Stabiel, waterdoorlatend en duurzaam uitgevoerd.
+          Vernieuwen van loodwerk rondom dakramen, schoorstenen en aansluitingen. Professioneel en duurzaam afgewerkt.
         </p>
-        <a href="#contact" class="dienst-link">
-          Meer info
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <a href="lood-renovatie.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- 06 Gipsbeplating -->
+      <div class="dienst-card reveal reveal-delay-2">
+        <div class="dienst-num" aria-hidden="true">06</div>
+        <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="4" y="8" width="40" height="32" rx="1"/>
+          <path d="M4 18h40M4 28h40M14 8v32M34 8v32"/>
+        </svg>
+        <div class="dienst-name">Gipsbeplating</div>
+        <p class="dienst-text">
+          Aanbrengen van gipsplaten voor wanden en plafonds. Strak, glad en klaar voor verdere afwerking.
+        </p>
+        <a href="gipsbeplating.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- 07 Timmerwerk -->
+      <div class="dienst-card reveal reveal-delay-3">
+        <div class="dienst-num" aria-hidden="true">07</div>
+        <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M10 38l4-4 20-20 4 4-20 20-4 4z"/>
+          <path d="M30 14l4-8 8 4-4 8"/>
+          <path d="M6 42l4-4"/>
+        </svg>
+        <div class="dienst-name">Timmerwerk</div>
+        <p class="dienst-text">
+          Kozijnen, deuren, dakkapellen en houten constructies. Degelijk timmerwerk van binnenshuis tot buiten.
+        </p>
+        <a href="timmerwerk.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- 08 Schilderwerk -->
+      <div class="dienst-card reveal reveal-delay-4">
+        <div class="dienst-num" aria-hidden="true">08</div>
+        <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M10 6h28v8H10z"/>
+          <path d="M18 14v10M30 14v10"/>
+          <path d="M14 24h20v10c0 2-2 4-4 4H18c-2 0-4-2-4-4V24z"/>
+          <path d="M22 38v4h4v-4"/>
+        </svg>
+        <div class="dienst-name">Schilderwerk</div>
+        <p class="dienst-text">
+          Binnen- en buitenschilderwerk voor woningen en bedrijfspanden. Strak werk, goede verf en nette oplevering.
+        </p>
+        <a href="schilderwerk.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- 09 Stukadoorswerk -->
+      <div class="dienst-card reveal reveal-delay-1">
+        <div class="dienst-num" aria-hidden="true">09</div>
+        <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="6" y="8" width="36" height="32" rx="1"/>
+          <path d="M6 20h36M6 32h36"/>
+          <path d="M18 8v12M30 8v12M18 32v8M30 32v8"/>
+        </svg>
+        <div class="dienst-name">Stukadoorswerk</div>
+        <p class="dienst-text">
+          Pleisteren van wanden en plafonds, spachtelputz en sierpleister. Vlak, glad of gestructureerd naar wens.
+        </p>
+        <a href="stukadoorswerk.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- 10 Maatwerk -->
+      <div class="dienst-card reveal reveal-delay-2">
+        <div class="dienst-num" aria-hidden="true">10</div>
+        <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 40L24 8l16 32"/>
+          <path d="M14 28h20"/>
+          <circle cx="24" cy="8" r="3"/>
+          <path d="M8 40h32"/>
+        </svg>
+        <div class="dienst-name">Maatwerk</div>
+        <p class="dienst-text">
+          Specifieke bouw- en renovatieoplossingen op maat. Wij denken mee en realiseren wat u nodig heeft.
+        </p>
+        <a href="maatwerk.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- 11 Verduurzaming -->
+      <div class="dienst-card reveal reveal-delay-3">
+        <div class="dienst-num" aria-hidden="true">11</div>
+        <svg class="dienst-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 4C24 4 10 14 10 26a14 14 0 0 0 28 0C38 14 24 4 24 4z"/>
+          <path d="M24 44V28M16 32l8-4 8 4"/>
+        </svg>
+        <div class="dienst-name">Verduurzaming</div>
+        <p class="dienst-text">
+          Dakisolatie, spouwmuurisolatie en energiebesparende maatregelen. Duurzamer wonen met minder stookkosten.
+        </p>
+        <a href="verduurzaming.html" class="dienst-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </section>
@@ -1269,13 +1660,13 @@
         Betrouwbaar.<br/>Vakkundig.<br/>Lokaal.
       </h2>
       <p class="reveal reveal-delay-2" style="font-size:0.95rem;line-height:1.8;color:var(--muted);margin-bottom:2.5rem;max-width:440px;">
-        Kalkema Dienstverlening is uw regionale partner voor grondverzet en bouwdiensten in Lelystad en omgeving.
-        Met een modern machinepark en ervaren vakmannen leveren wij kwaliteit — van kleine tuinprojecten
-        tot grote infrastructuurwerken.
+        Aannemersbedrijf Altijd is uw betrouwbare partner voor bouw, renovatie en verbouw.
+        Met ervaren vaklieden leveren wij kwaliteit — van kleine verbouwingen
+        tot grotere bouwprojecten, altijd netjes en op tijd.
       </p>
       <div class="kenmerken reveal reveal-delay-3">
-        <div class="kenmerk"><div class="kenmerk-dot"></div> Ervaren vakmannen op de machine</div>
-        <div class="kenmerk"><div class="kenmerk-dot"></div> Modern en goed onderhouden machinepark</div>
+        <div class="kenmerk"><div class="kenmerk-dot"></div> Ervaren dakdekkers en vaklieden</div>
+        <div class="kenmerk"><div class="kenmerk-dot"></div> Van dak tot gevel — alles uit één hand</div>
         <div class="kenmerk"><div class="kenmerk-dot"></div> Scherpe prijzen, geen verborgen kosten</div>
         <div class="kenmerk"><div class="kenmerk-dot"></div> Zowel voor particulier als zakelijk</div>
         <div class="kenmerk"><div class="kenmerk-dot"></div> Snelle oplevering, strakke planning</div>
@@ -1286,7 +1677,7 @@
       <div class="over-visual-main reveal">
         <img
           src="foto.jpg"
-          alt="Kalkema Dienstverlening aan het werk"
+          alt="Aannemersbedrijf Altijd aan het werk"
           style="width:100%;height:100%;object-fit:cover;display:block;"
         />
       </div>
@@ -1309,7 +1700,7 @@
         <div class="stats-sep"></div>
         <div class="stat"><div class="stat-dot"></div> Netjes Opgeleverd</div>
         <div class="stats-sep"></div>
-        <div class="stat"><div class="stat-dot"></div> Lelystad &amp; Omgeving</div>
+        <div class="stat"><div class="stat-dot"></div> Heel Nederland</div>
         <div class="stats-sep"></div>
         <div class="stat"><div class="stat-dot"></div> Afspraken Nagekomen</div>
         <div class="stats-sep"></div>
@@ -1327,7 +1718,7 @@
         <div class="stats-sep"></div>
         <div class="stat"><div class="stat-dot"></div> Netjes Opgeleverd</div>
         <div class="stats-sep"></div>
-        <div class="stat"><div class="stat-dot"></div> Lelystad &amp; Omgeving</div>
+        <div class="stat"><div class="stat-dot"></div> Heel Nederland</div>
         <div class="stats-sep"></div>
         <div class="stat"><div class="stat-dot"></div> Afspraken Nagekomen</div>
         <div class="stats-sep"></div>
@@ -1383,19 +1774,6 @@
         <div class="section-label reveal">Ervaringen</div>
         <h2 class="section-title reveal reveal-delay-1">Wat klanten<br/>over ons zeggen</h2>
       </div>
-      <div class="google-badge reveal reveal-delay-2">
-        <div class="google-badge-score">4.9</div>
-        <div class="google-badge-right">
-          <div class="google-badge-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="google-badge-label">19 reviews · Google</div>
-        </div>
-      </div>
     </div>
 
     <div class="reviews-grid">
@@ -1408,12 +1786,12 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">"Met een paar simpele aanpassingen hebben de heren van Kalkema Dienstverlening onze tuin omgetoverd tot een groene, kindvriendelijke plek. Ondanks de hitte hebben ze twee dagen hard gewerkt. Ze komen hun afspraken keurig na en laten de tuin opgeruimd achter. Toen er per ongeluk een kleine schade ontstond, hebben ze dit gerepareerd. Ik ben erg tevreden en zou ze zonder twijfel voor elk volgend tuinproject weer inhuren!"</p>
+        <p class="review-text">"Goed werk afgeleverd. Snel ook. Deden er alles aan om de klus zo snel mogelijk uit te voeren. Alle puin netjes opgeruimd etc. Alles werd goed overlegd met foto's etc. Ook eventueel meerwerk werd op tijd gemeld. Zeer tevreden."</p>
         <div class="review-footer">
-          <div class="review-avatar">M</div>
+          <div class="review-avatar">S</div>
           <div>
-            <div class="review-name">Michelle Loth</div>
-            <div class="review-time">8 maanden geleden</div>
+            <div class="review-name">Sander Cijsouw</div>
+            <div class="review-time">Een jaar geleden</div>
           </div>
         </div>
       </div>
@@ -1426,65 +1804,11 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">"Kalkema Dienstverlening heeft nieuw straatwerk bij ons aangelegd. Werkt netjes, denkt graag mee en komt zijn afspraken na. Ik raad hem zeker aan!"</p>
+        <p class="review-text">"Snel geholpen (binnen 3 uur na aanvraag). Eerlijke prijs. Goed werk afgeleverd. Vriendelijk."</p>
         <div class="review-footer">
-          <div class="review-avatar">M</div>
+          <div class="review-avatar">E</div>
           <div>
-            <div class="review-name">M J</div>
-            <div class="review-time">11 maanden geleden</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-3">
-        <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="review-text">"2 weken geleden is bij ons de voorkant opnieuw bestraat waar we super blij mee zijn, heel mooi gelegd, denkt ook met de klant mee wat hun willen. Ik zou Kalkema zeker aanbevelen aan anderen!"</p>
-        <div class="review-footer">
-          <div class="review-avatar">K</div>
-          <div>
-            <div class="review-name">Kaylee Slot</div>
-            <div class="review-time">10 maanden geleden</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-1">
-        <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="review-text">"Afspraak geheel nagekomen. Alles netjes en vakkundig gedaan. Aanrader voor iemand die nog zoekt. Volgende klus staat alweer gepland voor 2026."</p>
-        <div class="review-footer">
-          <div class="review-avatar">F</div>
-          <div>
-            <div class="review-name">Frans Eskes</div>
-            <div class="review-time">8 maanden geleden</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-2">
-        <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="review-text">"Heel tevreden over de verrichtte werkzaamheden. Goed meedenken over de uitvoering, punctueel, conform planning en kwaliteit geleverd. Ik raad dit bedrijf zeker aan."</p>
-        <div class="review-footer">
-          <div class="review-avatar">O</div>
-          <div>
-            <div class="review-name">Oscar Behr</div>
+            <div class="review-name">Erik Kallenberg</div>
             <div class="review-time">Een jaar geleden</div>
           </div>
         </div>
@@ -1498,15 +1822,16 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">"Goede snelle service en goed werk geleverd. Heel blij met deze topper en zijn werk."</p>
+        <p class="review-text">"Snelle reactie na opvragen offerte, erg klantvriendelijk en mee denkend."</p>
         <div class="review-footer">
-          <div class="review-avatar">M</div>
+          <div class="review-avatar">L</div>
           <div>
-            <div class="review-name">Max Van der Poel</div>
-            <div class="review-time">10 maanden geleden</div>
+            <div class="review-name">Lonneke de Blij</div>
+            <div class="review-time">Een jaar geleden</div>
           </div>
         </div>
       </div>
+
 
     </div>
   </section>
@@ -1525,19 +1850,11 @@
         <div class="contact-info reveal reveal-delay-2">
           <div class="contact-info-item">
             <span class="contact-info-label">Telefoon</span>
-            <a href="tel:0636106356" style="color:inherit;">06-36106356</a>
+            <a href="tel:+31348234960" style="color:inherit;">348 234 960</a>
           </div>
           <div class="contact-info-item">
             <span class="contact-info-label">E-mail</span>
-            <a href="mailto:info@kalkemadienstverlening.nl" style="color:inherit;">info@kalkemadienstverlening.nl</a>
-          </div>
-          <div class="contact-info-item">
-            <span class="contact-info-label">Adres</span>
-            <span>Hondsdraf 21, 8219 PW Lelystad</span>
-          </div>
-          <div class="contact-info-item">
-            <span class="contact-info-label">KvK</span>
-            <span>39063177</span>
+            <a href="mailto:info@aannemersbedrijfaltijd.nl" style="color:inherit;">info@aannemersbedrijfaltijd.nl</a>
           </div>
         </div>
       </div>
@@ -1562,10 +1879,17 @@
             <label class="form-label" for="dienst">Dienst</label>
             <select class="form-select" id="dienst">
               <option value="">Selecteer een dienst</option>
-              <option>Grondwerk</option>
-              <option>Machineverhuur</option>
-              <option>Straatwerk</option>
-              <option>Tuinaanleg</option>
+              <option>Hellende daken</option>
+              <option>Platte daken</option>
+              <option>Dakgoten zink</option>
+              <option>Schoorsteen renovatie</option>
+              <option>Lood renovatie</option>
+              <option>Gipsbeplating</option>
+              <option>Timmerwerk</option>
+              <option>Schilderwerk</option>
+              <option>Stukadoorswerk</option>
+              <option>Maatwerk</option>
+              <option>Verduurzaming</option>
               <option>Meerdere / overig</option>
             </select>
           </div>
@@ -1585,16 +1909,105 @@
 
   <!-- ─── FOOTER ────────────────────────────────────────────── -->
   <footer>
-    <div class="footer-logo">Kalkema Dienstverlening</div>
-    <span class="footer-copy">&copy; 2025 Kalkema Dienstverlening — KvK 39063177. Alle rechten voorbehouden.</span>
-    <ul class="footer-links">
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">Algemene Voorwaarden</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="footer-main">
+
+      <!-- Brand + Contact -->
+      <div class="footer-brand">
+        <img src="logo.webp" alt="Aannemersbedrijf Altijd" class="footer-brand-logo" />
+        <p class="footer-brand-text">
+          Uw betrouwbare dakdekker en aannemer actief door heel Nederland. Van hellende en platte daken tot timmerwerk en schilderwerk — altijd vakwerk, altijd op tijd.
+        </p>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          </div>
+          <div>
+            <span class="footer-contact-label">Telefoon</span>
+            <a href="tel:+31348234960" class="footer-contact-value">348 234 960</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <span class="footer-contact-label">E-mail</span>
+            <a href="mailto:info@aannemersbedrijfaltijd.nl" class="footer-contact-value">info@aannemersbedrijfaltijd.nl</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diensten -->
+      <div>
+        <div class="footer-col-title">Diensten</div>
+        <ul class="footer-nav-list">
+          <li><a href="hellende-daken.html">Hellende daken</a></li>
+          <li><a href="platte-daken.html">Platte daken</a></li>
+          <li><a href="dakgoten-zink.html">Dakgoten zink</a></li>
+          <li><a href="schoorsteen-renovatie.html">Schoorsteen renovatie</a></li>
+          <li><a href="lood-renovatie.html">Lood renovatie</a></li>
+          <li><a href="gipsbeplating.html">Gipsbeplating</a></li>
+          <li><a href="timmerwerk.html">Timmerwerk</a></li>
+          <li><a href="schilderwerk.html">Schilderwerk</a></li>
+          <li><a href="stukadoorswerk.html">Stukadoorswerk</a></li>
+          <li><a href="maatwerk.html">Maatwerk</a></li>
+          <li><a href="verduurzaming.html">Verduurzaming</a></li>
+        </ul>
+      </div>
+
+      <!-- Navigatie -->
+      <div>
+        <div class="footer-col-title">Navigatie</div>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#diensten">Diensten</a></li>
+          <li><a href="index.html#over-ons">Over Ons</a></li>
+          <li><a href="index.html#werkwijze">Werkwijze</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div style="margin-top:2.5rem;">
+          <div class="footer-col-title">Werkgebied</div>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;">Noord-Holland · Zuid-Holland · Utrecht · Noord-Brabant · Gelderland · Overijssel · Flevoland · Groningen · Friesland · Drenthe</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 <span>Aannemersbedrijf Altijd</span>. Alle rechten voorbehouden.</span>
+      <ul class="footer-legal">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="algemene-voorwaarden.html">Algemene Voorwaarden</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
   </footer>
 
   <script>
+    // ─── Popup ──────────────────────────────────────────────────
+    const popupOverlay = document.getElementById('popup-overlay');
+
+    function openPopup() {
+      popupOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePopup() {
+      popupOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('popup-close').addEventListener('click', closePopup);
+    popupOverlay.addEventListener('click', e => { if (e.target === popupOverlay) closePopup(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePopup(); });
+
+    function handlePopupSubmit(e) {
+      e.preventDefault();
+      document.getElementById('popup-form').style.display = 'none';
+      const s = document.getElementById('popup-success');
+      s.style.display = 'flex';
+    }
+
     // ─── Nav scroll state ───────────────────────────────────────
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => {
