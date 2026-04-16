@@ -608,6 +608,10 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function(){ emailjs.init({ publicKey: "9zr1gguPfebTNpMEg" }); })();
+  </script>
   <script>
     const popupOverlay=document.getElementById('popup-overlay');
     function openPopup(){popupOverlay.classList.add('open');document.body.style.overflow='hidden';}
@@ -615,7 +619,25 @@
     document.getElementById('popup-close').addEventListener('click',closePopup);
     popupOverlay.addEventListener('click',e=>{if(e.target===popupOverlay)closePopup();});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closePopup();});
-    function handlePopupSubmit(e){e.preventDefault();document.getElementById('popup-form').style.display='none';const s=document.getElementById('popup-success');s.style.display='flex';}
+    function handlePopupSubmit(e){
+      e.preventDefault();
+      const form=document.getElementById('popup-form');
+      const btn=form.querySelector('[type=submit]');
+      const origText=btn.textContent;
+      btn.disabled=true;btn.textContent='Versturen…';
+      const params={
+        naam:document.getElementById('p-naam').value,
+        telefoon:document.getElementById('p-telefoon').value||'—',
+        email:document.getElementById('p-email').value,
+        dienst:document.getElementById('p-dienst').value||'—',
+        bericht:document.getElementById('p-bericht').value,
+        pagina:document.title+' ('+location.pathname+')',
+        tijd:new Date().toLocaleString('nl-NL')
+      };
+      emailjs.send('service_m0nrook','template_0lziufa',params)
+        .then(function(){form.style.display='none';document.getElementById('popup-success').style.display='flex';})
+        .catch(function(err){btn.disabled=false;btn.textContent=origText;alert('Er ging iets mis bij het versturen. Probeer het opnieuw of bel ons direct.');console.error('EmailJS error:',err);});
+    }
     const nav=document.getElementById('main-nav');
     window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40);},{passive:true});
     function easeOut(t){return 1-Math.pow(1-t,3);}

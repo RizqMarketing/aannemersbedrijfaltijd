@@ -1986,6 +1986,10 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function(){ emailjs.init({ publicKey: "9zr1gguPfebTNpMEg" }); })();
+  </script>
   <script>
     // ─── Popup ──────────────────────────────────────────────────
     const popupOverlay = document.getElementById('popup-overlay');
@@ -2005,9 +2009,33 @@
 
     function handlePopupSubmit(e) {
       e.preventDefault();
-      document.getElementById('popup-form').style.display = 'none';
-      const s = document.getElementById('popup-success');
-      s.style.display = 'flex';
+      const form = document.getElementById('popup-form');
+      const btn = form.querySelector('[type=submit]');
+      const origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Versturen…';
+
+      const params = {
+        naam: document.getElementById('p-naam').value,
+        telefoon: document.getElementById('p-telefoon').value || '—',
+        email: document.getElementById('p-email').value,
+        dienst: document.getElementById('p-dienst').value || '—',
+        bericht: document.getElementById('p-bericht').value,
+        pagina: document.title + ' (' + location.pathname + ')',
+        tijd: new Date().toLocaleString('nl-NL')
+      };
+
+      emailjs.send('service_m0nrook', 'template_0lziufa', params)
+        .then(function () {
+          form.style.display = 'none';
+          document.getElementById('popup-success').style.display = 'flex';
+        })
+        .catch(function (err) {
+          btn.disabled = false;
+          btn.textContent = origText;
+          alert('Er ging iets mis bij het versturen. Probeer het opnieuw of bel ons direct.');
+          console.error('EmailJS error:', err);
+        });
     }
 
     // ─── Nav scroll state ───────────────────────────────────────
@@ -2087,15 +2115,37 @@
     function handleSubmit(e) {
       e.preventDefault();
       const btn = e.target.querySelector('[type=submit]');
-      btn.textContent = 'Verzonden!';
-      btn.style.background = 'var(--gold)';
+      const origText = btn.textContent;
+      btn.textContent = 'Versturen…';
       btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = 'Offerte Aanvragen';
-        btn.style.background = '';
-        btn.disabled = false;
-        e.target.reset();
-      }, 3000);
+
+      const params = {
+        naam: document.getElementById('naam').value,
+        telefoon: document.getElementById('telefoon').value || '—',
+        email: document.getElementById('email').value,
+        dienst: document.getElementById('dienst').value || '—',
+        bericht: document.getElementById('bericht').value,
+        pagina: document.title + ' (' + location.pathname + ')',
+        tijd: new Date().toLocaleString('nl-NL')
+      };
+
+      emailjs.send('service_m0nrook', 'template_0lziufa', params)
+        .then(function () {
+          btn.textContent = 'Verzonden!';
+          btn.style.background = 'var(--gold)';
+          setTimeout(() => {
+            btn.textContent = origText;
+            btn.style.background = '';
+            btn.disabled = false;
+            e.target.reset();
+          }, 3000);
+        })
+        .catch(function (err) {
+          btn.disabled = false;
+          btn.textContent = origText;
+          alert('Er ging iets mis bij het versturen. Probeer het opnieuw of bel ons direct.');
+          console.error('EmailJS error:', err);
+        });
     }
   </script>
 </body>
